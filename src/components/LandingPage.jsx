@@ -1,14 +1,14 @@
 import React from "react";
 import { MoveUp } from "lucide-react";
 
-document.body.append('<i data-lucide="move-up"></i>');
+// document.body.append('<i data-lucide="move-up"></i>');
 function LandingPage() {
   return (
     <div className="w-full h-screen bg-zinc-900 pt-1">
       <div className="textstructure mt-52 px-20">
         {["We Created", "Eye Opening", "Presentations"].map((item, index) => {
           return (
-            <div className="masker">
+            <div key={index} className="masker">
               <div className="w-fit flex items-end ">
                 {index === 1 && (
                   <div className="mr-[0.5vw] w-[8vw] rounded-md h-[5.7vw] top-[1.1vw] relative bg-green-500"></div>
@@ -23,12 +23,12 @@ function LandingPage() {
       </div>
       {/* first part of landing-page has completed  */}
 
-      <div className="border-t-[1px] border-zinc-800 mt-24 flex justify-between items-center py-5 px-20">
+      <div className="border-t-[1px] border-zinc-800 mt-20 flex justify-between items-center py-5 px-20">
         {[
           "For public and private companies",
           "From the first pitch to IPO",
         ].map((item, index) => (
-          <p className="text-md font-light tracking-tight leading-none">
+          <p key={index}  className="text-md font-light tracking-tight leading-none">
             {item}
           </p>
         ))}
@@ -51,8 +51,3 @@ function LandingPage() {
 
 export default LandingPage;
 
-
-// w-[9vw] h-[6vw] relative top-[1.4vw] bg-red-500"
-
-// flex items-center uppercase text-[9vw] h-full leading-[8vw]
-                //  font-['Test Founders Grotesk X-Cond SmBd'] font-bold
